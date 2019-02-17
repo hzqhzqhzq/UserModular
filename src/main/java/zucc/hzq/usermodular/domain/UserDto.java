@@ -1,10 +1,6 @@
 package zucc.hzq.usermodular.domain;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -14,10 +10,12 @@ import java.io.Serializable;
  * @Modified By:
  */
 @Entity
+@Table(name = "user_info")
 public class UserDto implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     @Column(name = "user_name", nullable = false)
     private String userName;

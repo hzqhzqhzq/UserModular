@@ -1,5 +1,6 @@
 package zucc.hzq.usermodular.service;
 
+import zucc.hzq.usermodular.domain.UserDto;
 import zucc.hzq.usermodular.util.ResultDto;
 
 /**
@@ -9,5 +10,6 @@ import zucc.hzq.usermodular.util.ResultDto;
  * @Modified By:
  */
 public interface UserService {
-    public ResultDto login();
+    public ResultDto login(UserDto user);
+    public ResultDto register(UserDto user);
 }
